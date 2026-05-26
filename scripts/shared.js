@@ -110,8 +110,85 @@ function initBudget() {
     if (el) el.textContent = formatMoney(value);
   });
 }
+// --- Interactive Checklists (Action Items + Packing) ---
+
+function createChecklistManager(listId, inputId, addBtnId, storageKey) {
+  const listEl = document.getElementById(listId);
+  const inputEl = document.getElementById(inputId);
+  const addBtn = document.getElementById(addBtnId);
+
+  if (!listEl || !inputEl || !addBtn) return;
+
+  let items = [];
+
+  function save() {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(items));
+    } catch (e) {
+      // ignore storage errors
+    }
+  }
+
+  function render() {
+    listEl.innerHTML = "";
+    items.forEach((item, index) => {
+      const li = document.createElement("li");
+
+      const label = document.createElement("span");
+      label.textContent = item.text;
+      label.className = "checklist-item-label" + (item.done ? " completed" : "");
+      label.addEventListener("click", () => {
+        items[index].done = !items[index].done;
+        save();
+        render();
+      });
+
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove";
+      removeBtn.className = "checklist-remove";
+      removeBtn.addEventListener("click", () => {
+        items.splice(index, 1);
+        save();
+        render();
+      });
+
+      li.appendChild(label);
+      li.appendChild(removeBtn);
+      listEl.appendChild(li);
+    });
+  }
+
+  function addItem() {
+    const text = inputEl.value.trim();
+    if (!text) return;
+    items.push({ text, done: false });
+    inputEl.value = "";
+    save();
+    render();
+  }
+
+  // Load from storage
+  try {
+    const stored = localStorage.getItem(storageKey);
+    if (stored) {
+      items = JSON.parse(stored);
+    }
+  } catch (e) {
+    items = [];
+  }
+
+  addBtn.addEventListener("click", addItem);
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") addItem();
+  });
+
+  render();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   initDDPTracker();
   initBudget();
+  createChecklistManager("action-list", "action-input", "action-add-btn", "trip-actions");
+  createChecklistManager("pack-list", "pack-input", "pack-add-btn", "trip-pack");
 });
+
