@@ -63,16 +63,16 @@ function initDDPTracker() {
 // --- Budget Model (Dashboard) ---
 const budgetModel = {
   realized: {
-    flights: 0,
-    hotels: 0,
-    tickets: 0,
-    diningCommitted: 0,
+    flights: 44.80,          // Delta cash portion
+    hotels: 7452.36 + 3581.94, // Polynesian + Royal Pacific package
+    tickets: 0,              // WDW tickets + Universal tickets are bundled in resort packages
+    diningCommitted: 0,      // DDP is included in Polynesian total; keep 0 here
   },
   projected: {
-    diningOutOfPocket: 0,
-    snacks: 0,
-    merch: 0,
-    misc: 0,
+    diningOutOfPocket: 750 + 600, // Disney LL snacks/extra + Universal dining rough combined
+    snacks: 60,                   // Beach parking + snacks
+    merch: 300,                   // Souvenirs + extras
+    misc: 125,                    // Gas + tolls + misc
   },
 };
 
