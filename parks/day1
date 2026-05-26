@@ -3,91 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 1 — Travel + Beach + Check‑In</title>
+  <title>Day 1 — Travel, Beach, Polynesian Check‑In</title>
   <link rel="stylesheet" href="../assets/styles.css" />
   <script defer src="../scripts/shared.js"></script>
 </head>
+
 <body>
   <header class="app-header">
-    <h1>Day 1 — Travel + Beach + Check‑In</h1>
-    <p class="subtitle">Sunday · July 12 · Travel Day · Cocoa Beach or Jetty Park · Polynesian Village Check‑In</p>
+    <h1>Day 1 — Travel + Beach + Check‑In</h1>
+    <p class="subtitle">Sunday · July 12 · Arrival Day</p>
   </header>
 
   <nav class="top-nav">
-    <button class="nav-btn" onclick="window.location.href='../index.html'">Back to Dashboard</button>
+    <button class="nav-btn" onclick="window.location.href='../index.html'">Back to Dashboard</button>
   </nav>
 
   <main class="content">
 
     <!-- ✈️ Flights -->
     <section class="card">
-      <h2>Confirmed Delta Flights — SGF ↔ MCO</h2>
-      <p class="muted">313,600 SkyMiles + $44.80 cash · Booked May 2026</p>
+      <h2>Flights — Springfield (SGF) → Orlando (MCO)</h2>
+      <p class="muted">Booked with 313,600 SkyMiles + $44.80 cash</p>
 
-      <h3>Outbound · Sun Jul 12 · ✅ Confirmed</h3>
+      <h3>Outbound — Sun July 12</h3>
       <ul class="simple-list">
-        <li><strong>Leg 1 — DL1680:</strong> SGF (Springfield‑Branson) → ATL (Atlanta Hartsfield‑Jackson) · Departs 6:00 AM · Main Cabin (SkyMiles Award)</li>
-        <li><strong>Leg 2 — DL0664:</strong> ATL → MCO (Orlando International) · Departs 10:25 AM · Arrives ~11:55 AM · Main Cabin (SkyMiles Award)</li>
+        <li><strong>DL1680:</strong> SGF → ATL · Dep 6:00 AM</li>
+        <li><strong>DL0664:</strong> ATL → MCO · Dep 10:25 AM · Arr ~11:55 AM</li>
       </ul>
-      <p class="small">💡 Wake‑up ~3:30 AM · Arrive airport by 4:15 AM · SGF security is fast — 30 min is ample.</p>
-      <p class="small">🛬 Arrive MCO ~11:55 AM → pick up rental car → drive to Cocoa Beach → beach afternoon → check in Polynesian Village ~5 PM.</p>
+
+      <p class="small">💡 SGF security is fast — arriving 45 minutes before departure is typically enough.</p>
+      <p class="small">🛬 After landing: pick up rental car → drive to Jetty Park Beach → check in at Polynesian Village ~5 PM.</p>
     </section>
 
     <!-- 🚗 Rental Car -->
     <section class="card">
-      <h2>Rental Car — Orlando International Airport (MCO)</h2>
-      <p class="muted">✅ Rental Car Booked — $617.93 Total</p>
+      <h2>Rental Car — Chrysler Pacifica (or similar)</h2>
+      <p class="muted">Total cost: $617.93 · Unlimited mileage · Additional driver included</p>
 
       <ul class="simple-list">
-        <li><strong>Vehicle:</strong> 7‑Passenger Minivan · Chrysler Pacifica or similar · Automatic</li>
-        <li><strong>Pick‑Up:</strong> Sun Jul 12 · 12:30 PM · MCO Counter</li>
-        <li><strong>Return:</strong> Sun Jul 19 · 4:00 PM · MCO Counter</li>
-        <li><strong>Additional Driver:</strong> Jennifer Pitts ✅</li>
-        <li><strong>Mileage:</strong> Unlimited ✅ · Loss Damage Waiver ✅</li>
+        <li><strong>Pick‑Up:</strong> Sun Jul 12 · 12:30 PM · MCO</li>
+        <li><strong>Return:</strong> Sun Jul 19 · 4:00 PM · MCO</li>
+        <li><strong>Insurance:</strong> Loss Damage Waiver included</li>
+        <li><strong>Drivers:</strong> Brian + Jennifer</li>
       </ul>
 
-      <h3>Price Breakdown</h3>
-      <ul class="simple-list small">
-        <li>Rental Rate (1 week @ $402) + (1 day @ $67)</li>
-        <li>Facility Charge $42 · Privilege Fee 10% · Taxes 6.5%</li>
-        <li><strong>Total:</strong> $617.93</li>
-      </ul>
-
-      <p class="small">💡 Pick up Pacifica at 12:30 PM after landing → drive east to beach (~45–50 min) → then west to Polynesian (~50 min). Return to MCO counter by 4 PM on Jul 19 — about 90 min before flight departure is ample.</p>
+      <p class="small">💡 Returning at 4 PM gives plenty of time before your evening flight home.</p>
     </section>
 
     <!-- 🏖️ Jetty Park Beach -->
     <section class="card">
-      <h2>Jetty Park Beach · Cape Canaveral · Best for Little Ones</h2>
-      <p class="muted">400 E Jetty Rd · ~50 min from MCO · ~60 min from Universal/Royal Pacific</p>
+      <h2>Jetty Park Beach — Cape Canaveral</h2>
+      <p class="muted">~50 min from MCO · ~60 min from Polynesian</p>
 
-      <h3>Why It’s #1 for Non‑Swimmers</h3>
+      <h3>Why Jetty Park is Perfect for the Boys</h3>
       <ul class="simple-list small">
-        <li>Protected cove on south side — calm, shallow, virtually wave‑free.</li>
-        <li>No rip currents · Gradual sandy slope · Kids can wade freely.</li>
-        <li>Tidal pools with crabs, barnacles, mussels, tiny fish — endlessly fascinating.</li>
-        <li>Bonus: Direct line‑of‑sight to Kennedy Space Center launch pads 1.5 mi north.</li>
-        <li>Water avg 82–84°F · Virtually no waves on protected jetty side.</li>
-        <li>Lifeguards on duty in summer · Parking $15/day · Restrooms, showers, playground, picnic tables.</li>
+        <li>Protected cove with calm, shallow water</li>
+        <li>No rip currents · gradual sandy slope</li>
+        <li>Tidal pools with crabs, barnacles, mussels, tiny fish</li>
+        <li>Lifeguards on duty in summer</li>
+        <li>Restrooms, showers, playground, picnic tables</li>
+        <li>Parking ~$15/day</li>
       </ul>
 
-      <h3>Pros & Cons</h3>
+      <h3>Tips for Jetty Park</h3>
       <ul class="simple-list small">
-        <li>✅ Calm protected water · Tidal pools kids love · Playground on‑site · Less crowded than Cocoa Beach · Lifeguards on duty</li>
-        <li>❌ Smaller footprint · No surf shops · Basic snack options · 5 min farther from MCO than Cocoa Beach</li>
+        <li>Arrive early afternoon for best parking</li>
+        <li>Bring water shoes — tidal pool rocks can be sharp</li>
+        <li>Check tide chart: low tide = best tidal pool exploring</li>
+        <li>SpaceX launches often visible from the beach</li>
       </ul>
 
-      <p class="small"><strong>Best for:</strong> Families with toddlers and young non‑swimmers who want calm water, tidal pools, and possible rocket launch views.</p>
-
-      <h3>Beach Bag Essentials</h3>
-      <p class="small">Sunscreen SPF 50+, towels, change of clothes, swim gear, snacks, water bottles, small bucket + shovel, boogie board (optional), water shoes (essential for tidal pools), swim diapers if needed.</p>
-
-      <h3>Launch Tips</h3>
-      <p class="small">SpaceX Starlink launches occur every 1–2 weeks · Check spaceflightnow.com and Space Launch Now app around Jul 1–5 for launches during trip window — often visible from parks!</p>
-      <p class="small">💡 If a launch is scheduled during your parks week, night launches are visible from Magic Kingdom or EPCOT parking areas — set an alert in Space Launch Now app.</p>
+      <h3>Beach Essentials</h3>
+      <p class="small">Sunscreen SPF 50+, towels, water bottles, snacks, swim gear, buckets, shovels, water shoes, change of clothes.</p>
     </section>
 
-    <!-- 🏨 Disney Resort -->
+    <!-- 🏨 Polynesian Village Resort -->
     <section class="card">
-      <h2>Disney’s Polynesian Village Resort · Club Level · Confirmed Booking</h2>
-      <p class="muted">Check‑in Sun Jul 12 · Check‑
+      <h2>Disney’s Polynesian Village Resort — Club Level</h2>
+      <p class="muted">Check‑In: Sun Jul 12 · Club Level Access Included</p>
+
+      <h3>Resort Details</h3>
+      <ul class="simple-list small">
+        <li><strong>Address:</strong> 1600 Seven Seas Drive, Lake Buena Vista, FL</li>
+        <li><strong>Parking:</strong> Included with resort stay</li>
+        <li><strong>Transportation:</strong> Monorail to MK/EPCOT · Boats to MK · Buses to all other parks</li>
+      </ul>
+
+      <h3>Directions from Jetty Park Beach</h3>
+      <ul class="simple-list small">
+        <li>Take FL‑528 W toward Orlando</li>
+        <li>Merge onto I‑4 W</li>
+        <li>Exit 67 toward Magic Kingdom</li>
+        <li>Follow signs to Polynesian Village Resort</li>
+      </ul>
+
+      <h3>Club Level Benefits</h3>
+      <ul class="simple-list small">
+        <li>Exclusive lounge access</li>
+        <li>Complimentary breakfast, snacks, desserts</li>
+        <li>Evening appetizers + beer/wine</li>
+        <li>Dedicated concierge</li>
+      </ul>
+
+      <p class="small">💡 Great for a low‑stress arrival evening — grab snacks, explore the resort, early bedtime for MK Day 2.</p>
+    </section>
+
+    <!-- 📝 Day 1 Tips -->
+    <section class="card">
+      <h2>Day 1 Tips & Strategy</h2>
+      <ul class="simple-list small">
+        <li>Keep the afternoon flexible — beach time + resort exploration is plenty.</li>
+        <li>Hydrate early and often — Florida heat hits immediately.</li>
+        <li>Use Club Level lounge for a light dinner instead of a full restaurant.</li>
+        <li>Lay out clothes and bags for Magic Kingdom Day 2 before bed.</li>
+        <li>Check Space Launch Now app for possible rocket launches.</li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>
