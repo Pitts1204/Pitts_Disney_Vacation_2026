@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney Trip Dashboard 2026</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="scripts/shared.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Disney & Universal Trip 2026</h1>
+    <p class="subtitle">Family Trip Command Center</p>
+  </header>
+
+  <nav class="top-nav">
+    <button class="nav-btn" data-day-link="parks/mk-day2.html">MK Day 2</button>
+  </nav>
+
+  <main class="content">
+    <section class="card">
+      <h2>Today’s Plan</h2>
+      <p class="muted">Quick snapshot of where you are and what’s next.</p>
+      <div id="today-summary">
+        <p><strong>Park:</strong> Magic Kingdom</p>
+        <p><strong>Focus:</strong> Headliners + kid‑friendly favorites</p>
+        <p><strong>Evening:</strong> Fireworks + flexible exit</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Park Schedule</h2>
+      <ul class="simple-list">
+        <li><strong>Day 1:</strong> Arrival / Resort</li>
+        <li><strong>Day 2:</strong> Magic Kingdom</li>
+        <li><strong>Day 3:</strong> EPCOT</li>
+        <li><strong>Day 4:</strong> Hollywood Studios</li>
+        <li><strong>Day 5:</strong> Animal Kingdom</li>
+        <li><strong>Day 6:</strong> Epic Universe</li>
+        <li><strong>Day 7:</strong> USF + IOA</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>DDP Credit Tracker</h2>
+      <p class="muted">Interactive — assumes party of 4 using credits together.</p>
+
+      <div class="ddp-row">
+        <div>
+          <p><strong>Total Credits:</strong> <span id="ddp-total">56</span></p>
+          <p><strong>Used Credits:</strong> <span id="ddp-used">0</span></p>
+          <p><strong>Remaining:</strong> <span id="ddp-remaining">56</span></p>
+        </div>
+        <div class="ddp-actions">
+          <button data-meal="1">Use 1 Meal (4 credits)</button>
+          <button data-meal="2">Use 2 Meals (8 credits)</button>
+          <button id="ddp-reset">Reset</button>
+        </div>
+      </div>
+      <p id="ddp-warning" class="warning hidden"></p>
+    </section>
+
+    <section class="card">
+      <h2>Tips, Tricks & Strategy</h2>
+      <ul class="simple-list">
+        <li><strong>Arrive early:</strong> Be at tapstiles 30–45 minutes before Early Entry.</li>
+        <li><strong>Front‑load headliners:</strong> Do the highest‑demand rides before 11:00 AM.</li>
+        <li><strong>Heat window:</strong> Plan indoor shows or breaks 1–4 PM.</li>
+        <li><strong>Backup routes:</strong> If a ride is down, pivot to nearby mid‑tier attractions.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Estimated Budget</h2>
+      <p class="muted">
+        Combines actual committed/spent costs with estimates for remaining days based on your current itinerary.
+      </p>
+
+      <div class="budget-grid">
+        <div>
+          <h3>Realized / Committed</h3>
+          <p><strong>Flights:</strong> $<span id="budget-flights">0</span></p>
+          <p><strong>Hotels:</strong> $<span id="budget-hotels">0</span></p>
+          <p><strong>Tickets & Packages:</strong> $<span id="budget-tickets">0</span></p>
+          <p><strong>Dining (Prepaid):</strong> $<span id="budget-dining-committed">0</span></p>
+          <p class="total-line">
+            <strong>Total Realized:</strong> $<span id="budget-realized-total">0</span>
+          </p>
+        </div>
+        <div>
+          <h3>Projected / Remaining</h3>
+          <p><strong>Dining (Out‑of‑Pocket):</strong> $<span id="budget-dining-projected">0</span></p>
+          <p><strong>Snacks & Extras:</strong> $<span id="budget-snacks">0</span></p>
+          <p><strong>Merch & Souvenirs:</strong> $<span id="budget-merch">0</span></p>
+          <p><strong>Transportation & Misc:</strong> $<span id="budget-misc">0</span></p>
+          <p class="total-line">
+            <strong>Total Projected:</strong> $<span id="budget-projected-total">0</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="total-line overall">
+        <strong>Overall Trip Estimate:</strong> $<span id="budget-overall-total">0</span>
+      </p>
+
+      <p class="muted small">
+        You can tweak the numbers in <code>shared.js</code> as your real costs and plans evolve.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
