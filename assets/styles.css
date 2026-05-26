@@ -423,3 +423,9 @@ body.light .day-card {
   opacity: 0;
   pointer-events: none;
 }
+/* Improve spacing for Routing Links */
+.day-card ul {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
