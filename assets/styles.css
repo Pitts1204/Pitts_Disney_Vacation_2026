@@ -1,431 +1,161 @@
 /* ============================================================
-   GLOBAL CINEMATIC STYLES — HYBRID MODE + GLOW ACCENTS
-   Applies to:
-   - Master Dashboard (index)
-   - Day pages (shared base)
+   UNIVERSAL DARK MODE — CARD-HEAVY — CENTERED LAYOUT
    ============================================================ */
 
-/* -----------------------------
-   0. RESET / BASE
------------------------------ */
-*,
-*::before,
-*::after {
+:root {
+  --bg: #111827;
+  --card: #1f2937;
+  --border: #374151;
+  --text: #f3f4f6;
+  --text-muted: #9ca3af;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-active: #1d4ed8;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html,
 body {
-  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  padding-bottom: 3rem;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #05060a;
-  color: #f5f5f7;
-  -webkit-font-smoothing: antialiased;
-}
+/* ============================================================
+   HERO (H1 — COMPACT)
+   ============================================================ */
 
-/* Dashboard base */
-body.dashboard {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #151827 0, #05060a 55%, #000 100%);
-}
-
-/* Light / Dark modes */
-body.light {
-  background: linear-gradient(180deg, #f5f7fb 0%, #e3e6f0 40%, #d5d9e5 100%);
-  color: #111827;
-}
-
-body.dark {
-  background: radial-gradient(circle at top, #151827 0, #05060a 55%, #000 100%);
-  color: #f9fafb;
-}
-
-/* -----------------------------
-   1. FONT FAMILIES (HYBRID)
------------------------------ */
-body.font-clean-sans {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-body.font-storybook-serif {
-  font-family: "Georgia", "Times New Roman", serif;
-}
-
-body.font-futuristic-geo {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 0.04em;
-}
-
-body.font-bold-cinematic {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
-}
-
-body.font-adventure-serif {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-body.font-cosmic-sans {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-body.font-comic-bold {
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 700;
-}
-
-/* -----------------------------
-   2. GLOW ACCENTS
------------------------------ */
-body.glow-gold {
-  --accent: #fbbf24;
-  --accent-soft: rgba(251, 191, 36, 0.25);
-}
-
-body.glow-purple-neon {
-  --accent: #a855f7;
-  --accent-soft: rgba(168, 85, 247, 0.3);
-}
-
-body.glow-red-cinematic {
-  --accent: #f97373;
-  --accent-soft: rgba(248, 113, 113, 0.3);
-}
-
-body.glow-green-jungle {
-  --accent: #22c55e;
-  --accent-soft: rgba(34, 197, 94, 0.3);
-}
-
-body.glow-electric-blue {
-  --accent: #38bdf8;
-  --accent-soft: rgba(56, 189, 248, 0.35);
-}
-
-body.glow-comic-yellow {
-  --accent: #facc15;
-  --accent-soft: rgba(250, 204, 21, 0.35);
-}
-
-body.glow-soft-blue {
-  --accent: #60a5fa;
-  --accent-soft: rgba(96, 165, 250, 0.3);
-}
-
-/* Generic accent usage */
-a,
-button {
-  cursor: pointer;
-}
-
-button {
-  border: none;
-}
-
-/* -----------------------------
-   3. HERO BANNER
------------------------------ */
-.hero-banner {
-  position: relative;
-  padding: 1.75rem 1.5rem 2.25rem;
-  border-radius: 0 0 1.75rem 1.75rem;
-  overflow: hidden;
-  color: #f9fafb;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-  transition: background 0.6s ease, box-shadow 0.4s ease;
-}
-
-/* Base gradient (overridden by banner-* classes) */
-.hero-banner {
-  background: radial-gradient(circle at top left, #1f2937 0%, #020617 55%, #000 100%);
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top, var(--accent-soft, rgba(96, 165, 250, 0.25)) 0%, transparent 55%);
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-.hero-content {
-  position: relative;
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.hero-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
-}
-
-.hero-subtitle {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-/* Mode indicator + continue button */
-.continue-btn {
-  margin-top: 0.75rem;
-  align-self: flex-start;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at top left, var(--accent, #60a5fa), #1d4ed8);
-  color: #0b1020;
-  font-weight: 600;
-  font-size: 0.9rem;
-  box-shadow: 0 0 18px var(--accent-soft, rgba(96, 165, 250, 0.35));
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-.continue-btn:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.05);
-  box-shadow: 0 0 24px var(--accent-soft, rgba(96, 165, 250, 0.45));
-}
-
-.mode-indicator {
-  margin-top: 0.5rem;
-  align-self: flex-start;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  opacity: 0.85;
-  background: rgba(15, 23, 42, 0.7);
-}
-
-/* -----------------------------
-   4. HERO BANNER THEMES
------------------------------ */
-/* Travel Day */
-.banner-travel {
-  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #0b1120 100%);
-}
-
-/* Magic Kingdom */
-.banner-mk {
-  background: radial-gradient(circle at top, #1d2440 0%, #111827 40%, #020617 100%);
-}
-
-/* EPCOT */
-.banner-epcot {
-  background: radial-gradient(circle at top, #1e1b4b 0%, #020617 55%, #000 100%);
-}
-
-/* Hollywood Studios */
-.banner-hs {
-  background: radial-gradient(circle at top, #111827 0%, #020617 45%, #000 100%);
-}
-
-/* Animal Kingdom */
-.banner-ak {
-  background: radial-gradient(circle at top, #064e3b 0%, #022c22 45%, #020617 100%);
-}
-
-/* Epic Universe */
-.banner-epic {
-  background: radial-gradient(circle at top, #0f172a 0%, #1d4ed8 35%, #020617 100%);
-}
-
-/* Universal */
-.banner-universal {
-  background: radial-gradient(circle at top, #111827 0%, #1f2937 40%, #020617 100%);
-}
-
-/* Travel Home */
-.banner-travel-home {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #020617 100%);
-}
-
-/* -----------------------------
-   5. QUICK ACCESS BUTTONS
------------------------------ */
-.quick-access {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 1rem 1.5rem 0.5rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.qa-btn {
-  flex: 1 1 calc(33.333% - 0.5rem);
-  min-width: 130px;
-  padding: 0.55rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.9);
-  color: #e5e7eb;
-  font-size: 0.85rem;
+.hero {
   text-align: center;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.7);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-body.light .qa-btn {
-  background: rgba(255, 255, 255, 0.9);
-  color: #111827;
-  border-color: rgba(148, 163, 184, 0.7);
-  box-shadow: 0 8px 18px rgba(148, 163, 184, 0.35);
-}
-
-.qa-btn:hover {
-  transform: translateY(-1px);
-  border-color: var(--accent, #60a5fa);
-  box-shadow: 0 10px 22px var(--accent-soft, rgba(96, 165, 250, 0.35));
-}
-
-/* -----------------------------
-   6. DAY GRID + CARDS
------------------------------ */
-.day-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-  padding: 1rem 1.5rem 2rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.day-card {
-  position: relative;
-  padding: 0.9rem 0.9rem 1rem;
-  border-radius: 1rem;
-  background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
-
-body.light .day-card {
-  background: linear-gradient(145deg, #f9fafb, #e5e7eb);
-  border-color: rgba(148, 163, 184, 0.7);
-  box-shadow: 0 10px 24px rgba(148, 163, 184, 0.4);
-}
-
-.day-card::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: radial-gradient(circle at top, var(--accent-soft, rgba(96, 165, 250, 0.18)), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-
-.day-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent, #60a5fa);
-  box-shadow: 0 14px 30px var(--accent-soft, rgba(96, 165, 250, 0.4));
-}
-
-.day-card:hover::before {
-  opacity: 1;
-}
-
-.day-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  opacity: 0.8;
+.hero h1 {
+  font-size: 1.8rem;
   margin-bottom: 0.25rem;
 }
 
-.day-title {
-  font-size: 0.95rem;
+.hero p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ============================================================
+   MAIN LAYOUT
+   ============================================================ */
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+/* ============================================================
+   BUTTONS (B1 — SOLID BLUE)
+   ============================================================ */
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  transition: background 0.15s ease;
 }
 
-/* -----------------------------
-   7. RESPONSIVE
------------------------------ */
-@media (max-width: 900px) {
-  .hero-banner {
-    padding: 1.5rem 1.25rem 2rem;
-  }
-
-  .hero-title {
-    font-size: 1.6rem;
-  }
-
-  .day-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.btn:hover {
+  background: var(--accent-hover);
 }
 
-@media (max-width: 640px) {
-  .quick-access {
-    padding-inline: 1rem;
-  }
-
-  .day-grid {
-    padding-inline: 1rem;
-    grid-template-columns: 1fr;
-  }
-
-  .hero-banner {
-    border-radius: 0 0 1.25rem 1.25rem;
-  }
-}
-/* LOADING OVERLAY */
-.loader-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.4s ease;
+.btn:active {
+  background: var(--accent-active);
 }
 
-.loader-spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid rgba(255,255,255,0.2);
-  border-top-color: var(--accent, #60a5fa);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
+/* ============================================================
+   LISTS
+   ============================================================ */
 
-.loader-text {
-  margin-top: 1rem;
-  color: #fff;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.loader-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-/* Improve spacing for Routing Links */
-.day-card ul {
+.card ul {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-  line-height: 1.6;
+  padding-left: 1.25rem;
+}
+
+.card li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   GRID (Dashboard)
+   ============================================================ */
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tile {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  background: #273244;
+}
+
+.tile h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+}
+
+.tile p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
