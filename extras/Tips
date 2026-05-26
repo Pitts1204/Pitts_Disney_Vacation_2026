@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Tips</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script defer src="../scripts/shared.js"></script>
+</head>
+
+<body class="dashboard dark glow-gold font-clean-sans banner-mk">
+
+<header class="hero-banner banner-mk">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Pro Tips</h1>
+    <p class="hero-subtitle">Strategy · Timing · Hacks</p>
+  </div>
+</header>
+
+<main style="max-width:960px;margin:0 auto;padding:1.5rem;">
+
+  <section class="day-card">
+    <h2>⚡ General Tips</h2>
+    <ul>
+      <li>Arrive 30–45 minutes before park opening.</li>
+      <li>Mobile order meals when walking to the restaurant.</li>
+      <li>Use mid‑day breaks to avoid meltdowns.</li>
+    </ul>
+  </section>
+
+  <section class="day-card" style="text-align:center;">
+    <button class="qa-btn nav-btn" data-day-link="../index.html">Return to Dashboard</button>
+  </section>
+
+</main>
+
+</body>
+</html>
