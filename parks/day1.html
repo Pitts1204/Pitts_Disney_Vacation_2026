@@ -3,123 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 1 — Travel, Beach, Polynesian Check‑In</title>
+  <title>Arrival Day — Day 1</title>
   <link rel="stylesheet" href="../assets/styles.css" />
   <script defer src="../scripts/shared.js"></script>
 </head>
 
-<body>
-  <header class="app-header">
-    <h1>Day 1 — Travel + Beach + Check‑In</h1>
-    <p class="subtitle">Sunday · July 12 · Arrival Day</p>
-  </header>
+<body class="compact">
 
-  <nav class="top-nav">
-    <button class="nav-btn" onclick="window.location.href='../index.html'">Back to Dashboard</button>
-  </nav>
+<header class="app-header">
+  <h1>Arrival Day — Day 1</h1>
+  <p class="subtitle">Sunday · July 12 · Polynesian Arrival + Narcoossee’s Dinner</p>
+</header>
 
-  <main class="content">
+<nav class="top-nav">
+  <button class="nav-btn" onclick="window.location.href='../index.html'">Back to Dashboard</button>
+</nav>
 
-    <!-- ✈️ Flights -->
-    <section class="card">
-      <h2>Flights — Springfield (SGF) → Orlando (MCO)</h2>
-      <p class="muted">Booked with 313,600 SkyMiles + $44.80 cash</p>
+<main class="content">
 
-      <h3>Outbound — Sun July 12</h3>
-      <ul class="simple-list">
-        <li><strong>DL1680:</strong> SGF → ATL · Dep 6:00 AM</li>
-        <li><strong>DL0664:</strong> ATL → MCO · Dep 10:25 AM · Arr ~11:55 AM</li>
-      </ul>
+<!-- COMMAND CENTER -->
+<section class="card">
+  <h2>Command Center</h2>
 
-      <p class="small">💡 SGF security is fast — arriving 45 minutes before departure is typically enough.</p>
-      <p class="small">🛬 After landing: pick up rental car → drive to Jetty Park Beach → check in at Polynesian Village ~5 PM.</p>
-    </section>
+  <h3>Arrival Checklist</h3>
+  <ul class="simple-list small">
+    <li>🛄 Pick up luggage / stroller</li>
+    <li>🚗 Rental car pickup</li>
+    <li>🏨 Check in at Polynesian (Pago Pago building)</li>
+    <li>🎟️ Confirm tickets + MagicBands</li>
+    <li>📱 Ensure MDE app is logged in</li>
+  </ul>
 
-    <!-- 🚗 Rental Car -->
-    <section class="card">
-      <h2>Rental Car — Chrysler Pacifica (or similar)</h2>
-      <p class="muted">Total cost: $617.93 · Unlimited mileage · Additional driver included</p>
+  <h3>Last‑Minute Prep Checklist</h3>
+  <div class="checklist-input-row">
+    <input id="prep-input" type="text" placeholder="Add an item..." />
+    <button id="prep-add-btn">Add</button>
+  </div>
+  <ul id="prep-list" class="simple-list checklist-list"></ul>
+</section>
 
-      <ul class="simple-list">
-        <li><strong>Pick‑Up:</strong> Sun Jul 12 · 12:30 PM · MCO</li>
-        <li><strong>Return:</strong> Sun Jul 19 · 4:00 PM · MCO</li>
-        <li><strong>Insurance:</strong> Loss Damage Waiver included</li>
-        <li><strong>Drivers:</strong> Brian + Jennifer</li>
-      </ul>
+<!-- DAILY SUMMARY -->
+<section class="card">
+  <h2>Daily Summary</h2>
 
-      <p class="small">💡 Returning at 4 PM gives plenty of time before your evening flight home.</p>
-    </section>
+  <h3>Afternoon</h3>
+  <p class="small">Arrive at MCO → Rental Car → Polynesian → Settle in → Explore resort.</p>
 
-    <!-- 🏖️ Jetty Park Beach -->
-    <section class="card">
-      <h2>Jetty Park Beach — Cape Canaveral</h2>
-      <p class="muted">~50 min from MCO · ~60 min from Polynesian</p>
+  <h3>Evening</h3>
+  <p class="small">Narcoossee’s Dinner @ 6:40 PM → Lagoon views → Return to Polynesian.</p>
+</section>
 
-      <h3>Why Jetty Park is Perfect for the Boys</h3>
-      <ul class="simple-list small">
-        <li>Protected cove with calm, shallow water</li>
-        <li>No rip currents · gradual sandy slope</li>
-        <li>Tidal pools with crabs, barnacles, mussels, tiny fish</li>
-        <li>Lifeguards on duty in summer</li>
-        <li>Restrooms, showers, playground, picnic tables</li>
-        <li>Parking ~$15/day</li>
-      </ul>
+<!-- ARRIVAL PLAN -->
+<section class="card">
+  <h2>Arrival Plan</h2>
+  <ul class="simple-list small">
+    <li>Pick up rental car</li>
+    <li>Drive to Polynesian Village Resort</li>
+    <li>Check in (Pago Pago building)</li>
+    <li>Unpack essentials</li>
+    <li>Explore resort grounds + beach</li>
+  </ul>
+</section>
 
-      <h3>Tips for Jetty Park</h3>
-      <ul class="simple-list small">
-        <li>Arrive early afternoon for best parking</li>
-        <li>Bring water shoes — tidal pool rocks can be sharp</li>
-        <li>Check tide chart: low tide = best tidal pool exploring</li>
-        <li>SpaceX launches often visible from the beach</li>
-      </ul>
+<!-- DINNER RESERVATION -->
+<section class="card">
+  <h2>Narcoossee’s Dinner — 6:40 PM</h2>
+  <p class="muted">Grand Floridian Resort · Signature Dining</p>
 
-      <h3>Beach Essentials</h3>
-      <p class="small">Sunscreen SPF 50+, towels, water bottles, snacks, swim gear, buckets, shovels, water shoes, change of clothes.</p>
-    </section>
+  <h3>Routing to Narcoossee’s</h3>
+  <ul class="simple-list small">
+    <li><strong>Primary:</strong> Take the Resort Monorail from Polynesian → Grand Floridian (1 stop)</li>
+    <li><strong>Backup:</strong> Take the Boat Launch from Polynesian → Grand Floridian</li>
+    <li>Walk to Narcoossee’s (located on the water, right side of the resort)</li>
+  </ul>
 
-    <!-- 🏨 Polynesian Village Resort -->
-    <section class="card">
-      <h2>Disney’s Polynesian Village Resort — Club Level</h2>
-      <p class="muted">Check‑In: Sun Jul 12 · Club Level Access Included</p>
+  <h3>Routing Back to Polynesian</h3>
+  <ul class="simple-list small">
+    <li><strong>Primary:</strong> Resort Monorail back to Polynesian</li>
+    <li><strong>Backup:</strong> Boat Launch back to Polynesian</li>
+    <li>Optional: Walk the pathway (10–12 minutes)</li>
+  </ul>
+</section>
 
-      <h3>Resort Details</h3>
-      <ul class="simple-list small">
-        <li><strong>Address:</strong> 1600 Seven Seas Drive, Lake Buena Vista, FL</li>
-        <li><strong>Parking:</strong> Included with resort stay</li>
-        <li><strong>Transportation:</strong> Monorail to MK/EPCOT · Boats to MK · Buses to all other parks</li>
-      </ul>
+<!-- EVENING OPTIONS -->
+<section class="card">
+  <h2>Evening Options</h2>
+  <ul class="simple-list small">
+    <li>Watch Electrical Water Pageant from Polynesian beach</li>
+    <li>Grab Dole Whip at Pineapple Lanai</li>
+    <li>Relax at the pool</li>
+    <li>Prep for Magic Kingdom Day 2</li>
+  </ul>
+</section>
 
-      <h3>Directions from Jetty Park Beach</h3>
-      <ul class="simple-list small">
-        <li>Take FL‑528 W toward Orlando</li>
-        <li>Merge onto I‑4 W</li>
-        <li>Exit 67 toward Magic Kingdom</li>
-        <li>Follow signs to Polynesian Village Resort</li>
-      </ul>
+<!-- NEXT DAY PREP -->
+<section class="card">
+  <h2>Next‑Day Prep</h2>
+  <p class="muted">Review before bed to make tomorrow smooth.</p>
 
-      <h3>Club Level Benefits</h3>
-      <ul class="simple-list small">
-        <li>Exclusive lounge access</li>
-        <li>Complimentary breakfast, snacks, desserts</li>
-        <li>Evening appetizers + beer/wine</li>
-        <li>Dedicated concierge</li>
-      </ul>
+  <div class="checklist-input-row">
+    <input id="nextday-input" type="text" placeholder="Add an item..." />
+    <button id="nextday-add-btn">Add</button>
+  </div>
 
-      <p class="small">💡 Great for a low‑stress arrival evening — grab snacks, explore the resort, early bedtime for MK Day 2.</p>
-    </section>
+  <ul id="nextday-list" class="simple-list checklist-list"></ul>
+</section>
 
-    <!-- 📝 Day 1 Tips -->
-    <section class="card">
-      <h2>Day 1 Tips & Strategy</h2>
-      <ul class="simple-list small">
-        <li>Keep the afternoon flexible — beach time + resort exploration is plenty.</li>
-        <li>Hydrate early and often — Florida heat hits immediately.</li>
-        <li>Use Club Level lounge for a light dinner instead of a full restaurant.</li>
-        <li>Lay out clothes and bags for Magic Kingdom Day 2 before bed.</li>
-        <li>Check Space Launch Now app for possible rocket launches.</li>
-      </ul>
-    </section>
-
-  </main>
+</main>
 </body>
 </html>
