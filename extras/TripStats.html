@@ -1,158 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trip Stats — Analytics Dashboard</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Stats</title>
+  <link rel="stylesheet" href="../assets/styles.css">
   <script defer src="../scripts/shared.js"></script>
-  <style>
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .stat-card {
-      padding: 1.25rem;
-      border-radius: 1rem;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
-      text-align: center;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .stat-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 30px rgba(96, 165, 250, 0.4);
-    }
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-      color: var(--accent, #60a5fa);
-    }
-    .chart-bar {
-      height: 14px;
-      border-radius: 6px;
-      background: var(--accent, #60a5fa);
-      margin-bottom: 0.5rem;
-      transition: width 0.6s ease;
-    }
-    .timeline {
-      border-left: 3px solid var(--accent, #60a5fa);
-      padding-left: 1rem;
-      margin-top: 1rem;
-    }
-    .timeline-item {
-      margin-bottom: 1rem;
-    }
-    .timeline-item h4 {
-      margin-bottom: 0.25rem;
-      color: var(--accent, #60a5fa);
-    }
-  </style>
 </head>
 
-<body class="dashboard dark glow-electric-blue font-clean-sans banner-epic">
+<body>
 
-<header class="hero-banner banner-epic">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Trip Stats — Analytics Dashboard</h1>
-    <p class="hero-subtitle">Your adventure, visualized</p>
-  </div>
+<header class="hero">
+  <h1>Trip Stats</h1>
+  <p>Analytics • Highlights • Summary</p>
 </header>
 
-<main style="max-width:960px;margin:0 auto;padding:1.5rem;">
+<main>
 
-  <section class="day-card">
-    <h2>⭐ Trip Overview</h2>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">8</div>
-        <p>Days of Adventure</p>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">4</div>
-        <p>Disney Parks</p>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">3</div>
-        <p>Universal Worlds</p>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">62</div>
-        <p>Total Attractions (est.)</p>
-      </div>
-    </div>
-  </section>
+  <div class="card">
+    <h2>Trip Overview</h2>
+    <ul>
+      <li>8 Days of Adventure</li>
+      <li>4 Disney Parks</li>
+      <li>3 Universal Worlds</li>
+      <li>~62 Attractions Experienced</li>
+    </ul>
+  </div>
 
-  <section class="day-card">
-    <h2>🎢 Ride Count Breakdown</h2>
-    <p>Estimated attractions per park:</p>
-    <div style="margin-top:1rem;">
-      <p>Magic Kingdom (18)</p>
-      <div class="chart-bar" style="width: 90%;"></div>
+  <div class="card">
+    <h2>Top Moments</h2>
+    <ul>
+      <li>Logan beating Bowser Jr. in Super Nintendo World</li>
+      <li>Caleb loving Na’vi River Journey</li>
+      <li>Family fireworks from the Polynesian beach</li>
+      <li>Riding Guardians of the Galaxy together</li>
+      <li>Hogwarts Express between parks</li>
+    </ul>
+  </div>
 
-      <p>EPCOT (10)</p>
-      <div class="chart-bar" style="width: 50%;"></div>
-
-      <p>Hollywood Studios (12)</p>
-      <div class="chart-bar" style="width: 60%;"></div>
-
-      <p>Animal Kingdom (8)</p>
-      <div class="chart-bar" style="width: 40%;"></div>
-
-      <p>Epic Universe (8)</p>
-      <div class="chart-bar" style="width: 40%;"></div>
-
-      <p>Universal + IOA (6)</p>
-      <div class="chart-bar" style="width: 30%;"></div>
-    </div>
-  </section>
-
-  <section class="day-card">
-    <h2>🗓 Trip Timeline</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h4>Day 1 — Travel</h4>
-        <p>SGF → ATL → MCO · Polynesian Check‑In</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 2 — Magic Kingdom</h4>
-        <p>Fantasyland · Adventureland · Fireworks</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 3 — EPCOT</h4>
-        <p>Frozen · Remy · Guardians</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 4 — Hollywood Studios</h4>
-        <p>Galaxy’s Edge · Slinky · Fantasmic</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 5 — Animal Kingdom</h4>
-        <p>Pandora · Safaris · Universal Check‑In</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 6 — Epic Universe</h4>
-        <p>Super Nintendo World · Celestial Park</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 7 — Universal + IOA</h4>
-        <p>Diagon Alley · Hogwarts Express · Jurassic</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Day 8 — Travel Home</h4>
-        <p>MCO → ATL → SGF</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="day-card" style="text-align:center;">
-    <button class="qa-btn nav-btn" data-day-link="../index.html">Return to Dashboard</button>
-  </section>
+  <div class="card">
+    <button class="btn" data-link="../index.html">Return to Dashboard</button>
+  </div>
 
 </main>
 
