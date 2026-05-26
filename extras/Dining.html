@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dining Planner</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css">
   <script defer src="../scripts/shared.js"></script>
 </head>
 
-<body class="dashboard dark glow-gold font-clean-sans banner-mk">
+<body>
 
-<header class="hero-banner banner-mk">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Dining Planner</h1>
-    <p class="hero-subtitle">Meals · Snacks · Reservations</p>
-  </div>
+<header class="hero">
+  <h1>Dining Planner</h1>
+  <p>Meals • Menus • Reservations</p>
 </header>
 
-<main style="max-width:960px;margin:0 auto;padding:1.5rem;">
+<main>
 
-  <section class="day-card">
-    <h2>🍽 Key Reservations</h2>
+  <div class="card">
+    <h2>Key Reservations</h2>
     <ul>
-      <li>Be Our Guest</li>
-      <li>Via Napoli</li>
-      <li>Chef Mickey’s</li>
-      <li>Toadstool Café</li>
-      <li>Mythos</li>
+      <li>Be Our Guest — Magic Kingdom</li>
+      <li>Via Napoli — EPCOT</li>
+      <li>Chef Mickey’s — Contemporary Resort</li>
+      <li>Toadstool Café — Epic Universe</li>
+      <li>Mythos — Islands of Adventure</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="day-card" style="text-align:center;">
-    <button class="qa-btn nav-btn" data-day-link="../index.html">Return to Dashboard</button>
-  </section>
+  <div class="card">
+    <h2>Quick Service Favorites</h2>
+    <ul>
+      <li>Pecos Bill — Magic Kingdom</li>
+      <li>Regal Eagle — EPCOT</li>
+      <li>Docking Bay 7 — Hollywood Studios</li>
+      <li>Satu’li Canteen — Animal Kingdom</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <button class="btn" data-link="../index.html">Return to Dashboard</button>
+  </div>
 
 </main>
 
