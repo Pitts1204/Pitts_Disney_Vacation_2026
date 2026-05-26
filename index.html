@@ -1,103 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pitts Disney & Universal 2026 — Dashboard</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Dashboard</title>
+  <link rel="stylesheet" href="assets/styles.css">
   <script defer src="scripts/shared.js"></script>
 </head>
 
-<body class="dashboard dark glow-electric-blue font-clean-sans">
+<body>
 
-<header class="hero-banner banner-epic">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Pitts Family Vacation 2026</h1>
-    <p class="hero-subtitle">Disney · Universal · Epic Adventure</p>
-  </div>
+<header class="hero">
+  <h1>Pitts Family Vacation 2026</h1>
+  <p>Disney • Universal • Epic Adventure</p>
 </header>
 
-<main style="max-width:1100px;margin:0 auto;padding:1.5rem;">
+<main>
 
-  <section class="day-card">
-    <h2>🎬 Trip Dashboard</h2>
-    <p>Select a day or tool below to jump into your cinematic itinerary.</p>
-  </section>
+  <div class="card">
+    <h2>Daily Itinerary</h2>
+    <div class="grid">
 
-  <!-- DAYS GRID -->
-  <section class="day-card">
-    <h2>📅 Day‑by‑Day Itinerary</h2>
-    <div class="day-grid">
-      <div class="day-card-tile" data-day="1" data-day-link="parks/Day1-Travel.html">
-        <h3>Day 1</h3>
-        <p>Travel · Arrival · Polynesian</p>
+      <div class="tile" data-link="parks/Day1-Travel.html">
+        <h3>Day 1</h3><p>Travel & Arrival</p>
       </div>
-      <div class="day-card-tile" data-day="2" data-day-link="parks/Day2-MK.html">
-        <h3>Day 2</h3>
-        <p>Magic Kingdom</p>
+
+      <div class="tile" data-link="parks/Day2-MK.html">
+        <h3>Day 2</h3><p>Magic Kingdom</p>
       </div>
-      <div class="day-card-tile" data-day="3" data-day-link="parks/Day3-EPCOT.html">
-        <h3>Day 3</h3>
-        <p>EPCOT</p>
+
+      <div class="tile" data-link="parks/Day3-EPCOT.html">
+        <h3>Day 3</h3><p>EPCOT</p>
       </div>
-      <div class="day-card-tile" data-day="4" data-day-link="parks/Day4-HS.html">
-        <h3>Day 4</h3>
-        <p>Hollywood Studios</p>
+
+      <div class="tile" data-link="parks/Day4-HS.html">
+        <h3>Day 4</h3><p>Hollywood Studios</p>
       </div>
-      <div class="day-card-tile" data-day="5" data-day-link="parks/Day5-AK.html">
-        <h3>Day 5</h3>
-        <p>Animal Kingdom · Universal Check‑In</p>
+
+      <div class="tile" data-link="parks/Day5-AK.html">
+        <h3>Day 5</h3><p>Animal Kingdom</p>
       </div>
-      <div class="day-card-tile" data-day="6" data-day-link="parks/Day6-EpicUniverse.html">
-        <h3>Day 6</h3>
-        <p>Epic Universe · Mario</p>
+
+      <div class="tile" data-link="parks/Day6-EpicUniverse.html">
+        <h3>Day 6</h3><p>Epic Universe</p>
       </div>
-      <div class="day-card-tile" data-day="7" data-day-link="parks/Day7-Universal.html">
-        <h3>Day 7</h3>
-        <p>Universal Studios · IOA</p>
+
+      <div class="tile" data-link="parks/Day7-Universal.html">
+        <h3>Day 7</h3><p>Universal + IOA</p>
       </div>
-      <div class="day-card-tile" data-day="8" data-day-link="parks/Day8-TravelHome.html">
-        <h3>Day 8</h3>
-        <p>Travel Home</p>
+
+      <div class="tile" data-link="parks/Day8-TravelHome.html">
+        <h3>Day 8</h3><p>Travel Home</p>
       </div>
+
     </div>
-  </section>
+  </div>
 
-  <!-- TOOLS / EXTRAS -->
-  <section class="day-card">
-    <h2>🧰 Tools & Extras</h2>
-    <div class="day-grid">
-      <div class="day-card-tile" data-day-link="extras/Dining.html">
-        <h3>Dining Planner</h3>
-        <p>Meals, snacks, and reservations</p>
+  <div class="card">
+    <h2>Tools & Extras</h2>
+    <div class="grid">
+
+      <div class="tile" data-link="extras/Dining.html">
+        <h3>Dining</h3><p>Meals & Menus</p>
       </div>
-      <div class="day-card-tile" data-day-link="extras/Maps.html">
-        <h3>Maps & Routing</h3>
-        <p>Park‑to‑park and hotel routes</p>
+
+      <div class="tile" data-link="extras/Maps.html">
+        <h3>Maps</h3><p>Routing & Navigation</p>
       </div>
-      <div class="day-card-tile" data-day-link="extras/Weather.html">
-        <h3>Weather & Contingency</h3>
-        <p>Rain, heat, and lightning plans</p>
+
+      <div class="tile" data-link="extras/Weather.html">
+        <h3>Weather</h3><p>Contingency Plans</p>
       </div>
-      <div class="day-card-tile" data-day-link="extras/Packing.html">
-        <h3>Packing List</h3>
-        <p>What to bring for everyone</p>
+
+      <div class="tile" data-link="extras/Packing.html">
+        <h3>Packing</h3><p>What to Bring</p>
       </div>
-      <div class="day-card-tile" data-day-link="extras/Tips.html">
-        <h3>Pro Tips</h3>
-        <p>Strategy, timing, and hacks</p>
+
+      <div class="tile" data-link="extras/Tips.html">
+        <h3>Tips</h3><p>Strategy & Hacks</p>
       </div>
-      <div class="day-card-tile" data-day-link="extras/LLMP.html">
-        <h3>LLMP Strategy</h3>
-        <p>Lightning Lane / Multi‑Pass logic</p>
+
+      <div class="tile" data-link="extras/LLMP.html">
+        <h3>LLMP</h3><p>Lightning Lane Strategy</p>
       </div>
-      <div class="day-card-tile" data-day-link="extras/TripStats.html">
-        <h3>Trip Stats</h3>
-        <p>Analytics & highlights</p>
+
+      <div class="tile" data-link="extras/TripStats.html">
+        <h3>Trip Stats</h3><p>Analytics Dashboard</p>
       </div>
+
     </div>
-  </section>
+  </div>
 
 </main>
 
