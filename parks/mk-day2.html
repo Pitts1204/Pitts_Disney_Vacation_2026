@@ -3,58 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magic Kingdom – Day 2</title>
+  <title>Magic Kingdom — Day 2</title>
   <link rel="stylesheet" href="../assets/styles.css" />
   <script defer src="../scripts/shared.js"></script>
 </head>
-<body>
-  <header class="app-header">
-    <h1>Magic Kingdom – Day 2</h1>
-    <p class="subtitle">Deep‑dive plan, routing, and tips</p>
-  </header>
 
-  <nav class="top-nav">
-    <button class="nav-btn" onclick="window.location.href='../index.html'">Back to Dashboard</button>
-  </nav>
+<body class="compact">
 
-  <main class="content">
-    <section class="card">
-      <h2>Morning Plan</h2>
-      <p class="muted">Front‑load headliners while energy and wait times are best.</p>
-      <ul class="simple-list">
-        <li>Rope drop: Seven Dwarfs Mine Train</li>
-        <li>Then: Peter Pan’s Flight</li>
-        <li>Then: Winnie the Pooh / Fantasyland loop</li>
-      </ul>
-    </section>
+<header class="app-header">
+  <h1>Magic Kingdom — Day 2</h1>
+  <p class="subtitle">Monday · July 13 · Early Entry + TRON + Fireworks</p>
+</header>
 
-    <section class="card">
-      <h2>Afternoon Options</h2>
-      <p class="muted">Heat + crowds = shows, indoor rides, and flexible routing.</p>
-      <ul class="simple-list">
-        <li>Option A: Indoor shows + Carousel of Progress</li>
-        <li>Option B: Character meets + low‑intensity rides</li>
-        <li>Option C: Resort break, then return for evening</li>
-      </ul>
-    </section>
+<nav class="top-nav">
+  <button class="nav-btn" onclick="window.location.href='../index.html'">Back to Dashboard</button>
+</nav>
 
-    <section class="card">
-      <h2>Evening Plan</h2>
-      <ul class="simple-list">
-        <li>Early dinner near hub</li>
-        <li>Fireworks viewing spot 30–45 minutes early</li>
-        <li>Post‑fireworks: low‑wait rides or exit depending on kids’ energy</li>
-      </ul>
-    </section>
+<main class="content">
 
-    <section class="card">
-      <h2>Tips for MK Day 2</h2>
-      <ul class="simple-list">
-        <li>Use early hours for Fantasyland and headliners.</li>
-        <li>Keep an eye on parade times to avoid Main Street congestion.</li>
-        <li>Have a rain backup: indoor attractions clustered by land.</li>
-      </ul>
-    </section>
-  </main>
+<!-- COMMAND CENTER -->
+<section class="card">
+  <h2>Command Center</h2>
+
+  <h3>Morning Actions</h3>
+  <ul class="simple-list small">
+    <li>🎢 Book TRON Individual Lightning Lane at 7:00 AM</li>
+    <li>⚡ Book LLMP selections (Peter Pan, Space Mountain, Jungle Cruise)</li>
+    <li>🕗 Be at Monorail by 7:55 AM for Early Entry</li>
+    <li>📍 Enter MK tapstiles by 8:05 AM</li>
+  </ul>
+
+  <h3>Height Cheat Sheet</h3>
+  <ul class="simple-list small">
+    <li>Logan (51"): Eligible for all MK rides</li>
+    <li>Caleb (44"): Eligible for all except Space Mountain (44" OK), TRON (48" needed)</li>
+  </ul>
+
+  <h3>Last‑Minute Prep Checklist</h3>
+  <div class="checklist-input-row">
+    <input id="prep-input" type="text" placeholder="Add an item..." />
+    <button id="prep-add-btn">Add</button>
+  </div>
+  <ul id="prep-list" class="simple-list checklist-list"></ul>
+</section>
+
+<!-- DAILY SUMMARY -->
+<section class="card">
+  <h2>Daily Summary</h2>
+
+  <h3>Morning</h3>
+  <p class="small">Early Entry → Seven Dwarfs → Peter Pan → Space Mountain → Fantasyland loop.</p>
+
+  <h3>Midday</h3>
+  <p class="small">Lunch at Columbia Harbour House → Parade positioning → Indoor attractions for heat.</p>
+
+  <h3>Afternoon</h3>
+  <p class="small">Adventureland + Frontierland rides → Character meets → Snacks.</p>
+
+  <h3>Evening</h3>
+  <p class="small">Be Our Guest dinner → Fireworks → Monorail return to Polynesian.</p>
+</section>
+
+<!-- BREAKFAST -->
+<section class="card">
+  <h2>Breakfast — Club Level Lounge</h2>
+  <p class="muted">Pago Pago Building · Opens 7:00 AM</p>
+  <ul class="simple-list small">
+    <li>Pastries, fruit, cereal, yogurt, coffee</li>
+    <li>Quick grab‑and‑go to make Early Entry smooth</li>
+    <li>Leave lounge by 7:50 AM</li>
+  </ul>
+</section>
+
+<!-- DIRECTIONS -->
+<section class="card">
+  <h2>Resort → Magic Kingdom</h2>
+  <ul class="simple-list small">
+    <li>Walk from Pago Pago to Monorail station (3 min)</li>
+    <li>Monorail ride to MK (7 min)</li>
+    <li>Security + tapstiles (5 min)</li>
+    <li><strong>Goal:</strong> Arrive by 8:05 AM</li>
+  </ul>
+</section>
+
+<!-- DETAILED ITINERARY -->
+<section class="card">
+  <h2>Detailed Itinerary</h2>
+
+  <h3>7:00 AM — Booking Window</h3>
+  <ul class="simple-list small">
+    <li>Book TRON ILL</li>
+    <li>Book LLMP: Peter Pan → Space Mountain → Jungle Cruise</li>
+  </ul>
+
+  <h3>8:00–10:30 AM — Early Entry + Fantasyland</h3>
+  <ul class="simple-list small">
+    <li>Seven Dwarfs Mine Train (Early Entry)</li>
+    <li>Peter Pan’s Flight (LLMP)</li>
+    <li>Space Mountain (LLMP)</li>
+    <li>Under the Sea — Ariel</li>
+    <li>Meet Ariel (Grotto)</li>
+    <li><strong>Routing Note:</strong> Use the bridge from Tomorrowland Terrace to cut into Fantasyland quickly.</li>
+  </ul>
+
+  <h3>10:30–12:30 PM — Liberty Square + Lunch</h3>
+  <ul class="simple-list small">
+    <li>Haunted Mansion</li>
+    <li>Columbia Harbour House (Lunch · DDP‑QS)</li>
+    <li><strong>Routing Note:</strong> After Haunted Mansion, walk directly across the path to CHH.</li>
+  </ul>
+
+  <h3>12:30–3:00 PM — Parade + Indoor Attractions</h3>
+  <ul class="simple-list small">
+    <li>Festival of Fantasy Parade</li>
+    <li>PhilharMagic</li>
+    <li>Carousel of Progress</li>
+    <li><strong>Routing Note:</strong> After parade, head left toward Adventureland for shade.</li>
+  </ul>
+
+  <h3>3:00–6:00 PM — Adventureland + Frontierland</h3>
+  <ul class="simple-list small">
+    <li>Jungle Cruise (LLMP)</li>
+    <li>Pirates of the Caribbean</li>
+    <li>Big Thunder Mountain Railroad</li>
+    <li>Meet Jack Sparrow (if available)</li>
+  </ul>
+
+  <h3>6:10 PM — Dinner</h3>
+  <ul class="simple-list small">
+    <li>Be Our Guest · DDP‑TS</li>
+  </ul>
+
+  <h3>8:00–10:00 PM — Fireworks + Exit</h3>
+  <ul class="simple-list small">
+    <li>Find fireworks spot by 8:30 PM</li>
+    <li>Happily Ever After at 9:00 PM</li>
+    <li>Exit via Main Street → Monorail</li>
+  </ul>
+</section>
+
+<!-- IF BEHIND SCHEDULE -->
+<section class="card">
+  <h2>If Behind Schedule</h2>
+  <ul class="simple-list small">
+    <li>Skip non‑LLMP rides first</li>
+    <li>Use LLMP refresh strategy</li>
+    <li>Prioritize indoor attractions during heat</li>
+    <li>Shift dining windows ±30 minutes</li>
+  </ul>
+</section>
+
+<!-- IF RAINING -->
+<section class="card">
+  <h2>If Raining</h2>
+  <ul class="simple-list small">
+    <li>Monsters Inc Laugh Floor</li>
+    <li>Carousel of Progress</li>
+    <li>PhilharMagic</li>
+    <li>Hall of Presidents</li>
+    <li>Main Street Bakery (snack break)</li>
+  </ul>
+</section>
+
+<!-- RIDE GUIDE -->
+<section class="card">
+  <h2>Ride Guide</h2>
+  <ul class="simple-list small">
+    <li>Seven Dwarfs — LLMP · 38"</li>
+    <li>Peter Pan — LLMP · Any height</li>
+    <li>Space Mountain — LLMP · 44"</li>
+    <li>TRON — ILL · 48"</li>
+    <li>Big Thunder — 40"</li>
+    <li>Pirates — Any height</li>
+    <li>Jungle Cruise — LLMP · Any height</li>
+  </ul>
+</section>
+
+<!-- CHARACTER OPPORTUNITIES -->
+<section class="card">
+  <h2>Character Opportunities</h2>
+  <ul class="simple-list small">
+    <li>Mickey — Town Square Theater</li>
+    <li>Cinderella + Rapunzel — Fairytale Hall</li>
+    <li>Ariel — Grotto</li>
+    <li>Jack Sparrow — Adventureland</li>
+    <li>Pooh + Tigger — Fantasyland</li>
+  </ul>
+</section>
+
+<!-- DINING WINDOWS -->
+<section class="card">
+  <h2>Dining Windows</h2>
+  <ul class="simple-list small">
+    <li>Breakfast — 7:30 AM · Pago Pago Lounge</li>
+    <li>AM Snack — 11:35 AM · Aloha Isle · DDP‑SNK</li>
+    <li>Lunch — 12:30 PM · Columbia Harbour House · DDP‑QS</li>
+    <li>Afternoon Snack — 3:45 PM · Sleepy Hollow · DDP‑SNK</li>
+    <li>Dinner — 6:10 PM · Be Our Guest · DDP‑TS</li>
+    <li>PM Snack — 9:45 PM · Pago Pago Desserts</li>
+  </ul>
+</section>
+
+<!-- NEXT DAY PREP -->
+<section class="card">
+  <h2>Next‑Day Prep</h2>
+  <p class="muted">Review before bed to make tomorrow smooth.</p>
+
+  <div class="checklist-input-row">
+    <input id="nextday-input" type="text" placeholder="Add an item..." />
+    <button id="nextday-add-btn">Add</button>
+  </div>
+
+  <ul id="nextday-list" class="simple-list checklist-list"></ul>
+</section>
+
+</main>
 </body>
 </html>
