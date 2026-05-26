@@ -3,172 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Disney Trip Dashboard 2026</title>
+  <title>Vacation Dashboard</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="scripts/theme-engine.js"></script>
   <script defer src="scripts/shared.js"></script>
 </head>
-<body>
-  <header class="app-header">
-    <h1>Disney & Universal Trip 2026</h1>
-    <p class="subtitle">Family Trip Command Center</p>
-  </header>
 
-  <nav class="top-nav">
-    <button class="nav-btn" data-day-link="parks/day1.html">Day 1 - Travel / Beach / Checkin</button>
-    <button class="nav-btn" data-day-link="parks/mk-day2.html">Day 2 - Magic Kingdom</button>
-    <button class="nav-btn" data-day-link="parks/epcot-day3.html">Day 3 - EPCOT</button>
-    <button class="nav-btn" data-day-link="parks/hs-day4.html">Day 4 - Hollywood</button>
-  </nav>
+<body class="dashboard">
 
-  <main class="content">
-    <section class="card">
-      <h2>Today’s Plan</h2>
-      <p class="muted">Quick snapshot of where you are and what’s next.</p>
-      <div id="today-summary">
-        <p><strong>Park:</strong> Magic Kingdom</p>
-        <p><strong>Focus:</strong> Headliners + kid‑friendly favorites</p>
-        <p><strong>Evening:</strong> Fireworks + flexible exit</p>
-      </div>
-    </section>
+<!-- HERO BANNER -->
+<header id="hero-banner" class="hero-banner">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 id="hero-title" class="hero-title">Your Cinematic Vacation</h1>
+    <p id="hero-subtitle" class="hero-subtitle">Select a day to preview its theme</p>
 
-    <section class="card">
-      <h2>Park Schedule</h2>
-      <ul class="simple-list">
-        <li><strong>Day 1:</strong> Arrival / Resort</li>
-        <li><strong>Day 2:</strong> Magic Kingdom</li>
-        <li><strong>Day 3:</strong> EPCOT</li>
-        <li><strong>Day 4:</strong> Hollywood Studios</li>
-        <li><strong>Day 5:</strong> Animal Kingdom</li>
-        <li><strong>Day 6:</strong> Epic Universe</li>
-        <li><strong>Day 7:</strong> USF + IOA</li>
-      </ul>
-    </section>
+    <button id="continue-trip-btn" class="continue-btn">
+      Continue Trip
+    </button>
 
-    <section class="card">
-      <h2>DDP Credit Tracker</h2>
-      <p class="muted">Interactive — assumes party of 4 using credits together.</p>
+    <div id="mode-indicator" class="mode-indicator">Preview Mode</div>
+  </div>
+</header>
 
-      <div class="ddp-row">
-        <div>
-          <p><strong>Total Credits:</strong> <span id="ddp-total">56</span></p>
-          <p><strong>Used Credits:</strong> <span id="ddp-used">0</span></p>
-          <p><strong>Remaining:</strong> <span id="ddp-remaining">56</span></p>
-        </div>
-        <div class="ddp-actions">
-          <button data-meal="1">Use 1 Meal (4 credits)</button>
-          <button data-meal="2">Use 2 Meals (8 credits)</button>
-          <button id="ddp-reset">Reset</button>
-        </div>
-      </div>
-      <p id="ddp-warning" class="warning hidden"></p>
-    </section>
+<!-- QUICK ACCESS -->
+<section class="quick-access">
+  <button class="qa-btn" data-day-link="dining.html">🍽 Dining</button>
+  <button class="qa-btn" data-day-link="packing.html">🎒 Packing</button>
+  <button class="qa-btn" data-day-link="maps.html">🗺 Maps</button>
+  <button class="qa-btn" data-day-link="tips.html">⚡ Tips</button>
+  <button class="qa-btn" data-day-link="weather.html">🌦 Weather</button>
+  <button class="qa-btn" data-day-link="llmp.html">🎢 LLMP Strategy</button>
+</section>
 
-    <section class="card">
-      <h2>Tips, Tricks & Strategy</h2>
-      <ul class="simple-list">
-        <li><strong>Arrive early:</strong> Be at tapstiles 30–45 minutes before Early Entry.</li>
-        <li><strong>Front‑load headliners:</strong> Do the highest‑demand rides before 11:00 AM.</li>
-        <li><strong>Heat window:</strong> Plan indoor shows or breaks 1–4 PM.</li>
-        <li><strong>Backup routes:</strong> If a ride is down, pivot to nearby mid‑tier attractions.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-  <h2>Action Items</h2>
-  <p class="muted">Add tasks as you think of them, then check them off when done.</p>
-
-  <div class="checklist-input-row">
-    <input id="action-input" type="text" placeholder="Add a new action item..." />
-    <button id="action-add-btn">Add</button>
+<!-- DAY SELECTOR -->
+<section class="day-grid">
+  <div class="day-card" data-day="1" data-day-link="parks/Day1-Travel.html">
+    <div class="day-label">Day 1</div>
+    <div class="day-title">Travel Day</div>
   </div>
 
-  <ul id="action-list" class="simple-list checklist-list"></ul>
-</section>
-
-<section class="card">
-  <h2>Packing List</h2>
-  <p class="muted">Build your packing list and mark items as packed.</p>
-
-  <div class="checklist-input-row">
-    <input id="pack-input" type="text" placeholder="Add a packing item..." />
-    <button id="pack-add-btn">Add</button>
+  <div class="day-card" data-day="2" data-day-link="parks/Day2-MK.html">
+    <div class="day-label">Day 2</div>
+    <div class="day-title">Magic Kingdom</div>
   </div>
 
-  <ul id="pack-list" class="simple-list checklist-list"></ul>
-</section>
-<section class="card">
-  <h2>Is Lightning Lane Multi Pass Worth It?</h2>
-  <p class="muted">High-level summary for each Disney park in peak July.</p>
+  <div class="day-card" data-day="3" data-day-link="parks/Day3-EPCOT.html">
+    <div class="day-label">Day 3</div>
+    <div class="day-title">EPCOT</div>
+  </div>
 
-  <h3>Magic Kingdom</h3>
-  <p class="small">
-    LLMP shines here: Seven Dwarfs, Peter Pan, Space Mountain, Big Thunder, Haunted Mansion, Jungle Cruise, Buzz.
-    Expect ~4 hours saved on a full day. TRON still requires separate LLI.
-    <strong>Verdict:</strong> Strong YES in July.
-  </p>
+  <div class="day-card" data-day="4" data-day-link="parks/Day4-HS.html">
+    <div class="day-label">Day 4</div>
+    <div class="day-title">Hollywood Studios</div>
+  </div>
 
-  <h3>EPCOT</h3>
-  <p class="small">
-    LLMP helps most with Remy, Frozen Ever After, Soarin’, Test Track (if open), and Mission: SPACE.
-    Guardians of the Galaxy: Cosmic Rewind is LLI-only, not LLMP.
-    On a well-planned day, expect ~2–3 hours saved.
-    <strong>Verdict:</strong> Worth it if you want to hit all headliners without backtracking.
-  </p>
+  <div class="day-card" data-day="5" data-day-link="parks/Day5-AK.html">
+    <div class="day-label">Day 5</div>
+    <div class="day-title">Animal Kingdom</div>
+  </div>
 
-  <h3>Hollywood Studios</h3>
-  <p class="small">
-    LLMP is extremely valuable here: Slinky Dog Dash, Tower of Terror, Rock ’n’ Roller Coaster, Smugglers Run, Toy Story Mania.
-    Rise of the Resistance is LLI-only.
-    In peak July, standby lines here are brutal—LLMP can easily save 3–4 hours.
-    <strong>Verdict:</strong> Very strong YES.
-  </p>
+  <div class="day-card" data-day="6" data-day-link="parks/Day6-EpicUniverse.html">
+    <div class="day-label">Day 6</div>
+    <div class="day-title">Epic Universe</div>
+  </div>
 
-  <h3>Animal Kingdom</h3>
-  <p class="small">
-    LLMP mainly helps with Kilimanjaro Safaris, Expedition Everest, and Na’vi River Journey.
-    Avatar Flight of Passage is LLI-only.
-    Because AK hours are shorter and crowds thin after midday, savings are more modest (~1.5–2 hours).
-    <strong>Verdict:</strong> Nice-to-have; prioritize MK and HS first if budget is tight.
-  </p>
+  <div class="day-card" data-day="7" data-day-link="parks/Day7-Universal.html">
+    <div class="day-label">Day 7</div>
+    <div class="day-title">Universal Studios / IOA</div>
+  </div>
+
+  <div class="day-card" data-day="8" data-day-link="parks/Day8-TravelHome.html">
+    <div class="day-label">Day 8</div>
+    <div class="day-title">Travel Home</div>
+  </div>
 </section>
 
-    <section class="card">
-      <h2>Estimated Budget</h2>
-      <p class="muted">
-        Combines actual committed/spent costs with estimates for remaining days based on your current itinerary.
-      </p>
-
-      <div class="budget-grid">
-        <div>
-          <h3>Realized / Committed</h3>
-          <p><strong>Flights:</strong> $<span id="budget-flights">0</span></p>
-          <p><strong>Hotels:</strong> $<span id="budget-hotels">0</span></p>
-          <p><strong>Tickets & Packages:</strong> $<span id="budget-tickets">0</span></p>
-          <p><strong>Dining (Prepaid):</strong> $<span id="budget-dining-committed">0</span></p>
-          <p class="total-line">
-            <strong>Total Realized:</strong> $<span id="budget-realized-total">0</span>
-          </p>
-        </div>
-        <div>
-          <h3>Projected / Remaining</h3>
-          <p><strong>Dining (Out‑of‑Pocket):</strong> $<span id="budget-dining-projected">0</span></p>
-          <p><strong>Snacks & Extras:</strong> $<span id="budget-snacks">0</span></p>
-          <p><strong>Merch & Souvenirs:</strong> $<span id="budget-merch">0</span></p>
-          <p><strong>Transportation & Misc:</strong> $<span id="budget-misc">0</span></p>
-          <p class="total-line">
-            <strong>Total Projected:</strong> $<span id="budget-projected-total">0</span>
-          </p>
-        </div>
-      </div>
-
-      <p class="total-line overall">
-        <strong>Overall Trip Estimate:</strong> $<span id="budget-overall-total">0</span>
-      </p>
-
-      <p class="muted small">
-        You can tweak the numbers in <code>shared.js</code> as your real costs and plans evolve.
-      </p>
-    </section>
-  </main>
 </body>
 </html>
