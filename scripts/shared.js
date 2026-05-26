@@ -192,6 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
   createChecklistManager("pack-list", "pack-input", "pack-add-btn", "trip-pack");
   createChecklistManager("prep-list", "prep-input", "prep-add-btn", "mk-day2-prep");
   createChecklistManager("nextday-list", "nextday-input", "nextday-add-btn", "mk-day2-nextday");
-
+  createChecklistManager("prep-list", "prep-input", "prep-add-btn", "epcot-day3-prep");
+  createChecklistManager("nextday-list", "nextday-input", "nextday-add-btn", "epcot-day3-nextday");
 });
 
