@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Day 2 — Magic Kingdom</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css">
   <script defer src="../scripts/shared.js"></script>
 </head>
 
-<body class="dashboard light glow-gold font-storybook-serif banner-mk">
+<body>
 
-<header class="hero-banner banner-mk">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Day 2 — Magic Kingdom</h1>
-    <p class="hero-subtitle">Fantasy · Adventure · Wonder</p>
-  </div>
+<header class="hero">
+  <h1>Day 2 — Magic Kingdom</h1>
+  <p>Fantasy · Adventure · Fireworks</p>
 </header>
 
-<main style="max-width:960px;margin:0 auto;padding:1.5rem;">
+<main>
 
-  <section class="day-card">
-    <h2>🏰 Magic Kingdom Overview</h2>
-    <p><strong>Date:</strong> July 13, 2026</p>
-    <p><strong>Park Hours:</strong> 9:00 AM – 10:00 PM</p>
-    <p><strong>LLMP Strategy:</strong> Seven Dwarfs → Peter Pan → Jungle Cruise → Big Thunder.</p>
-  </section>
+  <div class="card">
+    <h2>Overview</h2>
+    <p><strong>Park:</strong> Magic Kingdom</p>
+    <p><strong>Focus:</strong> Fantasyland + headliners with LLMP.</p>
+  </div>
 
-  <section class="day-card">
-    <h2>🗺 Routing Links</h2>
+  <div class="card">
+    <h2>Routing Links</h2>
     <ul>
-      <li><a class="qa-btn" target="_blank" href="https://maps.app.goo.gl/">Polynesian → Magic Kingdom (Monorail)</a></li>
-      <li><a class="qa-btn" target="_blank" href="https://maps.app.goo.gl/">Magic Kingdom → Lunch</a></li>
-      <li><a class="qa-btn" target="_blank" href="https://maps.app.goo.gl/">Magic Kingdom → Polynesian</a></li>
+      <li><a href="https://maps.app.goo.gl/" target="_blank">Polynesian → Magic Kingdom (Monorail)</a></li>
+      <li><a href="https://maps.app.goo.gl/" target="_blank">Magic Kingdom → Polynesian</a></li>
     </ul>
-  </section>
+  </div>
 
-  <section class="day-card">
-    <h2>🎢 Ride Routing</h2>
+  <div class="card">
+    <h2>Ride Plan</h2>
     <ul>
       <li>Rope Drop: Seven Dwarfs Mine Train</li>
-      <li>LLMP #1: Peter Pan’s Flight</li>
-      <li>LLMP #2: Jungle Cruise</li>
-      <li>LLMP #3: Big Thunder Mountain</li>
-      <li>Afternoon: Pirates, Haunted Mansion</li>
-      <li>Evening: Space Mountain, Buzz Lightyear</li>
+      <li>LLMP: Peter Pan’s Flight, Jungle Cruise, Big Thunder</li>
+      <li>Midday: Pirates, Haunted Mansion, Small World</li>
+      <li>Evening: Space Mountain, Buzz, Fireworks</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="day-card">
-    <h2>🍽 Dining</h2>
-    <p><strong>Lunch:</strong> Pecos Bill Tall Tale Inn & Café</p>
-    <a class="qa-btn" target="_blank" href="https://disneyworld.disney.go.com/dining/magic-kingdom/pecos-bill-tall-tale-inn-and-cafe/menus/">View Menu</a>
+  <div class="card">
+    <h2>Dining</h2>
+    <ul>
+      <li>Lunch: Pecos Bill or Cosmic Ray’s</li>
+      <li>Dinner: Be Our Guest (if booked) or quick service</li>
+    </ul>
+  </div>
 
-    <p style="margin-top:1rem;"><strong>Dinner:</strong> Be Our Guest Restaurant</p>
-    <a class="qa-btn" target="_blank" href="https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/menus/">View Menu</a>
-  </section>
+  <div class="card">
+    <h2>Weather Notes</h2>
+    <ul>
+      <li>Rain: Haunted Mansion, Pirates, PhilharMagic</li>
+      <li>Heat: Indoor queues + shops on Main Street</li>
+    </ul>
+  </div>
 
-  <section class="day-card">
-    <h2>🌦 Weather Contingency</h2>
-    <p><strong>Rain:</strong> Haunted Mansion, Pirates, PhilharMagic.</p>
-    <p><strong>Heat:</strong> Indoor queues + Fantasyland breezeways.</p>
-    <p><strong>Lightning:</strong> Coasters may close — refresh LLMP.</p>
-  </section>
-
-  <section class="day-card" style="text-align:center;">
-    <button class="qa-btn nav-btn" data-day-link="parks/Day3-EPCOT.html">Next: Day 3 — EPCOT</button>
-  </section>
-
-  <section class="day-card" style="text-align:center;">
-    <button class="qa-btn nav-btn" data-day-link="../index.html">Return to Dashboard</button>
-  </section>
+  <div class="card">
+    <button class="btn" data-link="Day3-EPCOT.html">Next: Day 3 — EPCOT</button>
+    <button class="btn" data-link="../index.html">Return to Dashboard</button>
+  </div>
 
 </main>
 
