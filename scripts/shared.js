@@ -1,22 +1,17 @@
 /* ============================================================
-   SHARED NAVIGATION + UTILITIES
-   - Handles all [data-day-link] navigation
+   SIMPLE, STABLE NAVIGATION
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
-  wireDataLinkNavigation();
-});
-
-function wireDataLinkNavigation() {
-  const navElements = document.querySelectorAll("[data-day-link]");
+  const navElements = document.querySelectorAll("[data-link]");
 
   navElements.forEach(el => {
     el.addEventListener("click", event => {
-      const link = el.dataset.dayLink;
+      const link = el.dataset.link;
       if (!link) return;
 
       event.preventDefault();
       window.location.href = link;
     });
   });
-}
+});
