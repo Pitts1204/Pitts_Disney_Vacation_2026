@@ -195,3 +195,51 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.checklist-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.checklist-input-row input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+}
+
+.checklist-input-row button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.checklist-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.checklist-item-label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.checklist-item-label.completed {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.checklist-remove {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
