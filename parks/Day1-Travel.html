@@ -6,10 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../assets/styles.css" />
   <script src="../scripts/shared.js" defer></script>
+
+  <style>
+    /* Make Back to Dashboard button bigger */
+    .back-button {
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #0f70d1;
+    }
+  </style>
 </head>
+
 <body class="dark-theme">
   <header class="top-bar">
-    <button class="back-button" onclick="navigateTo('../index.html')">← Dashboard</button>
+    <button class="back-button" onclick="navigateTo('../index.html')">← Back to Dashboard</button>
     <h1>Day 1 – Travel & Arrival</h1>
   </header>
 
@@ -21,61 +38,65 @@
 
       <h3>Delta 1680 – SGF → ATL (Boeing 717-200)</h3>
       <ul>
-        <li><strong>Boarding:</strong> ~5:30 AM</li>
-        <li><strong>Departure:</strong> 6:00 AM (Springfield, MO – SGF)</li>
-        <li><strong>Arrival:</strong> 8:54 AM (Atlanta, GA – ATL)</li>
+        <li><strong>Boarding:</strong> ~5:25–5:30 AM</li>
+        <li><strong>Departure:</strong> 6:00 AM</li>
+        <li><strong>Arrival:</strong> 8:54 AM</li>
         <li><strong>Flight Time:</strong> 1h 54m</li>
         <li><strong>Seats:</strong> Brian – 11E, Jennifer – 11B, Logan – 11C, Caleb – 11D</li>
       </ul>
 
       <h3>Layover – Atlanta (ATL)</h3>
       <ul>
-        <li><strong>Layover Duration:</strong> 1h 31m (8:54 AM – 10:25 AM)</li>
+        <li><strong>Duration:</strong> 1h 31m (8:54 AM – 10:25 AM)</li>
       </ul>
 
       <h3>Delta 664 – ATL → MCO (Airbus A321)</h3>
       <ul>
         <li><strong>Boarding:</strong> ~9:55 AM</li>
-        <li><strong>Departure:</strong> 10:25 AM (Atlanta, GA – ATL)</li>
-        <li><strong>Arrival:</strong> 12:00 PM (Orlando, FL – MCO)</li>
+        <li><strong>Departure:</strong> 10:25 AM</li>
+        <li><strong>Arrival:</strong> 12:00 PM</li>
         <li><strong>Flight Time:</strong> 1h 35m</li>
         <li><strong>Seats:</strong> Brian – 11F, Jennifer – 12A, Logan – 11E, Caleb – 12B</li>
       </ul>
     </section>
 
-    <!-- ROUTING LINKS -->
+    <!-- ROUTING -->
     <section class="card">
       <h2>Routing</h2>
 
       <h3>Home → SGF Long-Term Parking</h3>
-      <p><strong>Target:</strong> Arrive at SGF 1 hour before boarding (≈5:30 AM). Checked bags must be dropped no later than 45 minutes before departure.</p>
-      <p><strong>Out the Door:</strong> 4:10 AM (≈20-minute drive from home to SGF).</p>
+      <p><strong>Required SGF Arrival:</strong> 4:30 AM (1 hour before boarding)</p>
+      <p><strong>Out the Door:</strong> 4:10 AM</p>
       <p>
-        <a class="button" href="https://www.google.com/maps/dir/10886+W+County+Line+Rd,+Republic,+MO+65738/Springfield-Branson+National+Airport+Long+Term+Parking/" target="_blank">
+        <a class="button" target="_blank"
+           href="https://www.google.com/maps/dir/10886+W+County+Line+Rd,+Republic,+MO+65738/Springfield-Branson+National+Airport+Long+Term+Parking/">
           Open Route in Google Maps
         </a>
       </p>
 
       <h3>MCO Rental Car Facility → Jetty Park Beach</h3>
-      <p><strong>Approx Drive Time:</strong> 55–65 minutes.</p>
+      <p><strong>Drive Time:</strong> 55–65 minutes</p>
       <p>
-        <a class="button" href="https://www.google.com/maps/dir/Orlando+International+Airport+Car+Rental+Center/Jetty+Park+Beach,+Space+Coast,+FL/" target="_blank">
+        <a class="button" target="_blank"
+           href="https://www.google.com/maps/dir/Orlando+International+Airport+Car+Rental+Center/Jetty+Park+Beach,+Cape+Canaveral,+FL/">
           Open Route in Google Maps
         </a>
       </p>
 
-      <h3>Jetty Park Beach → Disney's Polynesian Village Resort</h3>
-      <p><strong>Approx Drive Time:</strong> ~1 hour 15 minutes. Depart around 3:30 PM to arrive near 5:00 PM check-in.</p>
+      <h3>Jetty Park Beach → Polynesian Village Resort</h3>
+      <p><strong>Drive Time:</strong> ~1 hour 15 minutes</p>
       <p>
-        <a class="button" href="https://www.google.com/maps/dir/Jetty+Park+Beach,+Space+Coast,+FL/Disney's+Polynesian+Village+Resort/" target="_blank">
+        <a class="button" target="_blank"
+           href="https://www.google.com/maps/dir/Jetty+Park+Beach,+Cape+Canaveral,+FL/Disney's+Polynesian+Village+Resort/">
           Open Route in Google Maps
         </a>
       </p>
 
-      <h3>Polynesian Village Resort → Narcoossee's (Grand Floridian)</h3>
-      <p><strong>Approx Travel Time:</strong> 15–20 minutes via Resort Monorail and short walk.</p>
+      <h3>Polynesian → Narcoossee's (Grand Floridian)</h3>
+      <p><strong>Travel Time:</strong> 15–20 minutes via Resort Monorail</p>
       <p>
-        <a class="button" href="https://www.google.com/maps/dir/Disney's+Polynesian+Village+Resort/Narcoossee's,+4401+Floridian+Way,+Lake+Buena+Vista,+FL+32830/" target="_blank">
+        <a class="button" target="_blank"
+           href="https://www.google.com/maps/dir/Disney's+Polynesian+Village+Resort/Narcoossee's,+4401+Floridian+Way,+Lake+Buena+Vista,+FL/">
           Open Route in Google Maps
         </a>
       </p>
@@ -86,29 +107,29 @@
       <h2>Hotel Details</h2>
       <p><strong>Resort:</strong> Disney's Polynesian Village Resort</p>
       <p><strong>Area:</strong> Magic Kingdom Resort Area</p>
-      <p><strong>Dates:</strong> Sun, Jul 12, 2026 – Thu, Jul 16, 2026</p>
-      <p><strong>Confirmation Number:</strong> 42470243</p>
+      <p><strong>Dates:</strong> Sun, Jul 12 – Thu, Jul 16, 2026</p>
+      <p><strong>Confirmation #:</strong> 42470243</p>
     </section>
 
-    <!-- KING KAMEHAMEHA CLUB LOUNGE -->
+    <!-- CLUB LOUNGE -->
     <section class="card">
       <h2>King Kamehameha Club Lounge</h2>
-      <p><strong>Location:</strong> 1st and 2nd floor of the Hawaii longhouse</p>
+      <p><strong>Location:</strong> Hawaii Longhouse (Floors 1 & 2)</p>
 
-      <h3>Continental Breakfast (7:00 AM – 10:30 AM)</h3>
-      <p>Coffee, tea, milk, chocolate milk, boxed juice, sodas, mimosas, pastries, bagels, cold cuts &amp; cheeses, boiled eggs, oatmeal, cereal, fruit.</p>
+      <h3>Breakfast (7:00–10:30 AM)</h3>
+      <p>Pastries, bagels, cold cuts, cheeses, oatmeal, cereal, fruit, mimosas, juices, coffee, tea.</p>
 
-      <h3>Snacks (12:00 PM – 4:00 PM)</h3>
-      <p>Coffee, tea, iced tea, lemonade, boxed juice, sodas, beer, wine, tortilla chips, potato chips, salsa, ranch, granola bars, cookies, crackers, fruit.</p>
+      <h3>Snacks (12:00–4:00 PM)</h3>
+      <p>Chips, salsa, ranch, granola bars, cookies, crackers, fruit, sodas, beer, wine.</p>
 
-      <h3>Evening Appetizers (5:00 PM – 7:00 PM)</h3>
-      <p>Coffee, tea, boxed juice, sodas, beer, wine, cheese, crackers, breads, dips, salads, rotating hot appetizers.</p>
+      <h3>Evening Appetizers (5:00–7:00 PM)</h3>
+      <p>Cheese, crackers, breads, dips, salads, rotating hot appetizers, beer, wine.</p>
 
-      <h3>Desserts (8:00 PM – 10:00 PM)</h3>
-      <p>Coffee, tea, boxed juice, sodas, beer, wine, cookies, cakes, brownies, pudding.</p>
+      <h3>Desserts (8:00–10:00 PM)</h3>
+      <p>Cookies, cakes, brownies, pudding, coffee, tea, sodas, beer, wine.</p>
     </section>
 
-    <!-- DETAILED ITINERARY -->
+    <!-- ITINERARY -->
     <section class="card">
       <h2>Detailed Itinerary – Wake to Bed</h2>
 
@@ -124,9 +145,9 @@
 
       <h3>Flights – SGF → ATL → MCO</h3>
       <ul>
-        <li><strong>5:25–5:30 AM:</strong> Boarding Begins Delta 1680.</li>
+        <li><strong>5:25–5:30 AM:</strong> Boarding begins for Delta 1680.</li>
         <li><strong>6:00–8:54 AM:</strong> Delta 1680 – SGF to ATL (1h 54m).</li>
-        <li><strong>8:54–10:25 AM:</strong> Layover in ATL (1h 31m) – restroom, snacks, short walk.</li>
+        <li><strong>8:54–10:25 AM:</strong> Layover in ATL (1h 31m).</li>
         <li><strong>10:25 AM–12:00 PM:</strong> Delta 664 – ATL to MCO (1h 35m).</li>
       </ul>
 
@@ -140,33 +161,35 @@
 
       <h3>Afternoon – Jetty Park to Polynesian</h3>
       <ul>
-        <li><strong>3:30 PM:</strong> Depart Jetty Park for Disney's Polynesian Village Resort.</li>
+        <li><strong>3:30 PM:</strong> Depart Jetty Park.</li>
         <li><strong>4:45–5:00 PM:</strong> Arrive at Polynesian, park, enter Great Ceremonial House.</li>
-        <li><strong>5:00–5:30 PM:</strong> Check-in, receive room, drop bags, quick room tour.</li>
-        <li><strong>5:30–6:00 PM:</strong> Freshen up, change for dinner, optional quick stop at Club Lounge for a drink or snack.</li>
+        <li><strong>5:00–5:30 PM:</strong> Check-in, receive room, drop bags.</li>
+        <li><strong>5:30–6:00 PM:</strong> Freshen up, change for dinner, optional Club Lounge stop.</li>
       </ul>
 
       <h3>Evening – Narcoossee's Dinner</h3>
       <ul>
-        <li><strong>6:00 PM:</strong> Leave room, walk to Great Ceremonial House, board Resort Monorail.</li>
+        <li><strong>6:00 PM:</strong> Walk to monorail platform, board Resort Monorail.</li>
         <li><strong>6:20–6:30 PM:</strong> Arrive at Grand Floridian, walk to Narcoossee's.</li>
         <li><strong>6:40–8:10 PM:</strong> Dinner at Narcoossee's.</li>
       </ul>
-      <p><strong>Narcoossee's Dinner Menu:</strong>
-        <a href="https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/narcoossees/menus/" target="_blank">
+      <p><strong>Narcoossee's Menu:</strong>
+        <a target="_blank"
+           href="https://disneyworld.disney.go.com/dining/grand-floridian-resort-and-spa/narcoossees/menus/">
           View Menu
         </a>
       </p>
 
-      <h3>Night – Monorail Back, Fireworks & Dessert</h3>
+      <h3>Night – Fireworks & Dessert</h3>
       <ul>
-        <li><strong>8:10–8:30 PM:</strong> Walk back to Grand Floridian monorail, ride Resort Monorail back to Polynesian.</li>
-        <li><strong>8:45 PM:</strong> Walk to Polynesian beach in front of the bungalows for fireworks viewing.</li>
-        <li><strong>9:20–9:40 PM:</strong> Watch Magic Kingdom fireworks from the beach (music piped in).</li>
+        <li><strong>8:10–8:30 PM:</strong> Monorail back to Polynesian.</li>
+        <li><strong>8:45 PM:</strong> Walk to Polynesian beach (best viewing spot).</li>
+        <li><strong>9:20–9:40 PM:</strong> Magic Kingdom fireworks.</li>
         <li><strong>9:40–9:50 PM:</strong> Walk back toward Hawaii longhouse.</li>
-        <li><strong>9:50–10:10 PM:</strong> Optional Club Lounge desserts (cookies, cakes, brownies, pudding, drinks).</li>
-        <li><strong>10:10–10:30 PM:</strong> Baths/showers, lay out clothes for Magic Kingdom (Day 2), lights out.</li>
+        <li><strong>9:50–10:10 PM:</strong> Optional Club Lounge desserts.</li>
+        <li><strong>10:10–10:30 PM:</strong> Baths/showers, lay out clothes for Day 2, lights out.</li>
       </ul>
+
     </section>
 
   </main>
