@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maps & Routing</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css">
   <script defer src="../scripts/shared.js"></script>
 </head>
 
-<body class="dashboard dark glow-electric-blue font-clean-sans banner-epcot">
+<body>
 
-<header class="hero-banner banner-epcot">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-title">Maps & Routing</h1>
-    <p class="hero-subtitle">Getting from A to B</p>
-  </div>
+<header class="hero">
+  <h1>Maps & Routing</h1>
+  <p>Navigation • Transit • Park Hopping</p>
 </header>
 
-<main style="max-width:960px;margin:0 auto;padding:1.5rem;">
+<main>
 
-  <section class="day-card">
-    <h2>🗺 Core Routes</h2>
+  <div class="card">
+    <h2>Core Disney Routes</h2>
     <ul>
-      <li>Polynesian ↔ Magic Kingdom</li>
-      <li>Polynesian ↔ EPCOT</li>
-      <li>Polynesian ↔ Animal Kingdom</li>
+      <li>Polynesian ↔ Magic Kingdom (Monorail)</li>
+      <li>Polynesian ↔ EPCOT (Monorail)</li>
       <li>Polynesian ↔ Hollywood Studios</li>
-      <li>Royal Pacific ↔ Universal / Epic Universe</li>
+      <li>Polynesian ↔ Animal Kingdom</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="day-card" style="text-align:center;">
-    <button class="qa-btn nav-btn" data-day-link="../index.html">Return to Dashboard</button>
-  </section>
+  <div class="card">
+    <h2>Universal Routes</h2>
+    <ul>
+      <li>Royal Pacific ↔ Universal Studios</li>
+      <li>Royal Pacific ↔ Islands of Adventure</li>
+      <li>Royal Pacific ↔ Epic Universe</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Useful Map Links</h2>
+    <ul>
+      <li><a href="https://maps.app.goo.gl/" target="_blank">Google Maps</a></li>
+      <li><a href="https://disneyworld.disney.go.com/maps/" target="_blank">Disney World Maps</a></li>
+      <li><a href="https://www.universalorlando.com/web/en/us/plan-your-visit/mobile-app" target="_blank">Universal Orlando App</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <button class="btn" data-link="../index.html">Return to Dashboard</button>
+  </div>
 
 </main>
 
